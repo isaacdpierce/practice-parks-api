@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>National Park Finder</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,400"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <main>
+      <h1>National Park Finder</h1>
+      <div class="container">
+        <h3>Enter a state code to find National Parks within it!</h3>
+        <p>
+          You can enter more than one state code if you put a comma between each
+          one
+        </p>
+
+        <form id="js-form">
+          <p>
+            <label for="search-term">Enter a State Code </label>
+            <input
+              type="text"
+              name="search-term"
+              id="js-search-term"
+              placeholder="NY"
+              required
+            />
+          </p>
+
+          <p>
+            <label for="max-results">Set maximum results</label>
+            <input
+              type="number"
+              name="max-results"
+              id="js-max-results"
+              value="10"
+            />
+          </p>
+
+          <input type="submit" value="Get parks!" />
+        </form>
+
+        <p id="js-error-message" class="error-message"></p>
+        <section id="results" class="hidden">
+          <h2>Search results</h2>
+          <ul id="results-list"></ul>
+        </section>
+      </div>
+    </main>
+
+    <script src="config.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
